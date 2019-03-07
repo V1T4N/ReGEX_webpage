@@ -1,0 +1,112 @@
+:root{
+  --html_height:700px;
+  --back_pict_height: 1500px;
+  --back_pict_width: 1000px;
+  --nav_ul_width: 1100px;
+  --list_right_padding: 15px;
+  --item_padding: 35px;
+  --header_back_height: calc(299px / 4);
+  --header_back_width: calc(4093px / 4);
+  --footer_height: 50px;
+}
+
+html{
+  width:100%;
+  height:var(--html_height);
+}
+
+body {
+    padding: 0px;
+    margin:0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-image: url("materials/top_page/top_pictures/3.jpg");
+    background-size: var(--back_pict_height) var(--back_pict_width);
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+    /* position: absolute; */
+}
+
+header {
+    width: 100%;
+    min-width: calc(var(--nav_ul_width) + var(--list_right_padding) + var(--item_padding)); 
+    height: var(--header_back_height);
+    background:linear-gradient(90deg,black 0%,black 53%,white 53%,white 100%);
+}
+
+nav {
+  width: 100%;
+  height: var(--header_back_height);
+  position: absolute;
+  left: calc(--back_pict_height / 2 - 100% / 2);
+  background-image: url("materials/header/header_back.png");
+  background-size: var(--header_back_width) var(--header_back_height);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+header nav ul {
+  width: var(--nav_ul_width);
+  margin: auto auto;
+}
+.header-list {
+  height: 60px;
+  padding-right: var(--list_right_padding);
+  float: left;
+  text-align: right;
+  list-style-type: none;
+}
+.item {
+  color: black;
+  float: right;
+  padding-top: var(--item_padding);
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+a:link { color: black; }
+a:visited { color: black; }
+a:hover { color: gray; }
+a:active { color:gray; }
+
+.message {
+  position: fixed;
+  top: calc(var(--html_height) - 250px);
+  left: 30px;
+}
+
+/* safariだけfooterが浮く問題 違うページのときに考えよう。 */
+footer {
+    position: absolute;
+    width: 100%;
+    min-width: calc(var(--nav_ul_width) + var(--list_right_padding) + var(--item_padding)); 
+    /* background-color: black; */
+    top: calc(var(--html_height) - var(--footer_height));
+}
+
+.div_footer {
+  width:100%;
+  /* background-color: black; */
+  height: var(--footer_height);
+  position: absolute;
+  bottom:0px;
+}
+
+.SNS {
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    top: calc(var(--footer_height) / 2 - 40px / 2);
+}
+
+small{
+  float:right;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: calc(var(--footer_height) - 10px);
+  color: white;
+  font-size: 10px;
+}
