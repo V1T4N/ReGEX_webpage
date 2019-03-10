@@ -1,0 +1,23 @@
+/* topで使う仕様のみ */
+
+body {
+    padding: 0px;
+    margin:0px;
+    height: 100%;
+    width: 100%;
+    min-width: var(--nav_ul_width);
+    background-color: black;
+    /* background-image: url("../materials/top_page/top_pictures/1.jpg");  */
+    background-size: var(--back_pict_width) var(--back_pict_height);
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+    /* position: absolute; */
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    min-width: calc(var(--nav_ul_width) + var(--list_right_padding) + var(--item_padding)); 
+    top: calc(var(--html_height) - var(--footer_height));
+    background-color:rgba(0,0,0,0);
+}
